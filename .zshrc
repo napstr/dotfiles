@@ -55,7 +55,13 @@ eval `dircolors /home/napster/.dir_colors/dircolors`
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git, zsh-wakatime, zsh-autosuggestions)
+plugins=(git
+	zsh-wakatime
+	zsh-autosuggestions
+	jhipster
+	docker
+	docker-compose
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,3 +113,13 @@ source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 #show ansi colors in less
 export LESS=-R
+
+# tabtab source for jhipster package
+# uninstall by removing these lines or running `tabtab uninstall jhipster`
+[[ -f /home/napster/10/jhipster-test/node_modules/tabtab/.completions/jhipster.zsh ]] && . /home/napster/10/jhipster-test/node_modules/tabtab/.completions/jhipster.zsh
+
+
+# missing packages suggestions like in bash, see https://stackoverflow.com/questions/3316568/zsh-package-suggestion
+source /etc/zsh_command_not_found
+
+fpath=(/home/napster/.zsh/gradle-completion $fpath)

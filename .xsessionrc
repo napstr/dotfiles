@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# load my nvidia settings
+nvidia-settings --load-config-only
+nvidia-settings -a '[gpu:0]/GPUGraphicsClockOffset[3]=100'
+# force a proper keyboard
+setxkbmap de nodeadkeys
+echo $(date) >> ~/xsessionloaded.log

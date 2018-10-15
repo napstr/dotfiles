@@ -1,1 +1,4 @@
 alias ..="cd .." ....="cd ../.." ......="cd ../../.." ........="cd ../../../.." ..........="cd ../../../../.."
+alias rethonkdb=rethinkdb
+alias sublime=/opt/sublime_text/sublime_text
+alias gw="./gradlew"

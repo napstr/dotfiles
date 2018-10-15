@@ -27,3 +27,4 @@ export SDKMAN_DIR="/home/napster/.sdkman"
 
 export PATH=$PATH:/usr/local/go/bin
 
+export PATH=~/.npm-global/bin:$PATH
